@@ -1,0 +1,124 @@
+<div class="row d-flex justify-content-center " style="background-color:#F6DDCC;">
+    <div class="col-md-5  text-white text-left py-3 rounded-shadow form" style="background-color:#5DADE2  ; border: 2px inline solid; boredr-color:black;">
+        <form [formGroup]="addProductForm " style="border:2px inline black; boredr-color:red;">
+             <div class="details">Add Product Details</div>
+<!-- ============Product ID Field ===============-->
+            <div class="form-group py-1">
+               <label for="ID">Product ID</label>
+               <input type="text" class="form-control" id="id" 
+                autocomplete="off" formControlName="id" >
+                <small *ngIf="id.invalid && id.touched" 
+                   class="text-danger">
+                   Product Id is Required. </small>
+                <small *ngIf="addProductForm.controls['id'].hasError('pattern')" class="text-danger">
+                    It should be alphanumeric value
+                </small>
+            </div>
+ <!-- ============Product Name Field ===============-->
+            <div class="form-group py-1">
+                <label for="Name">Product Name </label>
+                <input type="text" class="form-control" id="name" 
+                 autocomplete="off" formControlName="name">
+                 <small *ngIf="name.invalid && name.touched" 
+                   class="text-danger">
+                  Product Name is Required. </small>
+                  <small *ngIf="addProductForm.controls['name'].hasError('maxlength')" class="text-danger">
+                    Maximum character length should be 30.
+                  </small>
+                
+             </div>
+<!-- ============Product category Field ===============-->
+            <div class="form-group py-1">
+                <label for="Category"> Category</label>
+                 <select class="form-control" id="category" 
+                   autocomplete="off" formControlName="category">
+                    <option disabled selected>Select the Category</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="T.V.">T.V.</option>
+
+                 </select>
+                 <small *ngIf="category.invalid && category.touched" 
+                   class="text-danger">
+                  Category is Required.</small>
+                  
+                
+             </div>
+ <!-- ============Product Price Field ===============-->
+            <div class="form-group py-1">
+                <label for="Price">Price</label>
+                <input type="text" class="form-control" id="price" 
+                 autocomplete="off" formControlName="price">
+                 <small *ngIf="price.invalid && price.touched" 
+                   class="text-danger">
+                    Price is Required. </small>
+                  <small *ngIf="addProductForm.controls['price'].hasError('pattern')" class="text-danger">
+                    Price should be float value
+                  </small>
+                
+             </div>
+<!-- ============Product Serial Number Field ===============-->
+            <div class="form-group py-1">
+                <label for="Serial">Serial Number</label>
+                <input type="text" class="form-control" id="sno" 
+                 autocomplete="off" formControlName="serial_number">
+                 <small *ngIf="serial_number.invalid && serial_number.touched" 
+                   class="text-danger">
+                   Serial Number is Required. </small>
+                  <small *ngIf="addProductForm.controls['serial_number'].hasError('pattern')" class="text-danger">
+                    It should be alphanumeric value
+                  </small>
+                
+             </div>
+ <!-- ============Product release_date  Field ===============-->
+            <div class="form-group py-1">
+                <label for="release_date">Release Date</label>
+                <input type="date"  class="form-control"  
+                 formControlName="release_date" max="{{ maxDate }}">
+                 
+                 <small *ngIf="release_date.invalid && release_date.touched" 
+                   class="text-danger">
+                   Release Date is Required. </small>
+                  <small *ngIf="addProductForm.controls['release_date'].hasError('pattern')" class="text-danger">
+                    It should be Past Date 
+                  </small>
+                
+             </div>
+ <!-- ============Product Stock_units Field ===============-->
+            <div class="form-group py-1">
+                <label for="Stock_units">Stock Units</label>
+                <input type="text" class="form-control" id="sunit" 
+                 autocomplete="off" formControlName="Stock_units">
+                 <small *ngIf="Stock_units.invalid && Stock_units.touched" 
+                   class="text-danger">
+                   Stock Unit is Required. </small>
+                  <small *ngIf="addProductForm.controls['Stock_units'].hasError('pattern')" class="text-danger">
+                    Stock Unit should be Numeric value
+                  </small>
+                
+             </div>
+             
+ <!-- ============Product Description Field ===============-->
+            <div class="form-group py-1">
+                <label for="Description">Description</label>
+                <input type="text" class="form-control" id="desc" 
+                 autocomplete="off" formControlName="Description">
+                 <small *ngIf="Description.invalid && Description.touched" 
+                   class="text-danger">
+                   Description is Required. </small>
+                  <small *ngIf="addProductForm.controls['Description'].hasError('maxlength')" class="text-danger">
+                    Maximum character length should be 150.
+                  </small>
+                
+             </div>
+             
+             
+<!-- ==================Submit Button========== -->
+             <div class="py-3">
+                <button (click)="onSubmit()" [disabled]="addProductForm.invalid" 
+                 type="submit" class="btn submit">Submit</button>
+                <button (click)="onBack()" class="btn">Back</button> 
+            </div>
+          </form>
+    </div>
+</div>

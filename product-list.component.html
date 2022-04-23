@@ -1,0 +1,33 @@
+<!-- ==========Code For Navbar================ -->
+<nav class="navbar" style="background-color:#D2B4DE ;">
+    <div class="container-fluid" style="background-color:#D2B4DE ;">
+      <a class="navbar-brand text-black">PRODUCT LIST</a>
+      <form class="d-flex">
+        <button class="btn  btn-success" type="submit" (click)="addProduct()">ADD PRODUCT</button>
+      </form>
+    </div>
+  </nav>
+<!-- ===========Code For Table============= -->
+<table class="table table-borderless">
+    <thead>
+        <tr>
+          <th scope="col">Product Id</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Category</th>
+          <th scope="col">Price</th>
+          <th scope="col">StockUnits</th>
+          <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let product of products ; index as i" ><!--For Displaying All records -->
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.Stock_units}}</td>
+            <td><button class="btn" routerLink='/ProductDetails/{{ i }}' >View Details</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,74 @@
+{
+  "Products": [
+    {
+      "id": "A11",
+      "name": "Samsung",
+      "category": "Phone",
+      "price": 10000.5,
+      "serial_number": "AA11B",
+      "release_date": "2021-06-06",
+      "Stock_units": 11,
+      "Description": "xyz"
+    },
+    {
+      "id": "A12",
+      "name": "Charger",
+      "category": "USB-C",
+      "price": 2000.5,
+      "serial_number": "AA12B",
+      "release_date": "2020-04-01",
+      "Stock_units": 9,
+      "Description": "abc"
+    },
+    {
+      "id": "A13",
+      "name": "Vedio Games",
+      "category": "Sports equipment",
+      "price": 500,
+      "serial_number": "AA13B",
+      "release_date": "2019-09-05",
+      "Stock_units": 5,
+      "Description": "pqr"
+    },
+    {
+      "id": "A14",
+      "name": "Printer",
+      "category": "IT equipment",
+      "price": 4500,
+      "serial_number": "AA14B",
+      "release_date": "2018-07-15",
+      "Stock_units": 15,
+      "Description": "lmn"
+    },
+    {
+      "id": "A15",
+      "name": "Vivo",
+      "category": "Mobile",
+      "price": "200000.78",
+      "serial_number": "A16B",
+      "release_date": "2022-04-16",
+      "Stock_units": "16",
+      "Description": "XYz"
+    },
+    {
+      "id": "A17",
+      "name": "Dell",
+      "category": "Laptop",
+      "price": "40000",
+      "serial_number": "A17B",
+      "release_date": "2019-02-07",
+      "Stock_units": "17",
+      "Description": "abc"
+    },
+    {
+      "id": "101",
+      "name": "oppo f17",
+      "category": "Mobile",
+      "price": "10000",
+      "serial_number": "76474899388",
+      "release_date": "2022-04-12",
+      "Stock_units": "10",
+      "Description": "mobile"
+    }
+  ]
+}
